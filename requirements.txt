@@ -1,0 +1,10 @@
+./marker
+transformers
+torch
+torchvision
+pymupdf>=1.23.0
+numpy
+gradio>=4.0.0
+openai>=1.0.0
+spaces
+Pillow

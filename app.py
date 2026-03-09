@@ -313,7 +313,7 @@ def process_pdf(
     # We scale them to 72 dpi using the ratio (overlay_w / det_img_w).
     overlay_image: Optional[Image.Image] = None
     try:
-        import fitz
+        import pymupdf as fitz
         doc = fitz.open(pdf_path)
         first_page = doc[0]
         mat = fitz.Matrix(1.0, 1.0)   # 72 dpi — 1 pt == 1 px

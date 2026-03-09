@@ -32,6 +32,20 @@ flag, and disable the LLM checkbox with an explanatory banner.
 from __future__ import annotations
 
 
+import subprocess
+import sys
+
+# The HF Space Dockerfile evaluates requirements.txt before mounting the repo
+# directory. We must compile and install our local marker fork at runtime.
+subprocess.run(
+    [
+        sys.executable, "-m", "pip", "install",
+        "./marker",
+        "--quiet",
+    ],
+    check=True,
+)
+
 import os
 import io
 import logging

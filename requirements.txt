@@ -1,4 +1,4 @@
-./marker
+
 transformers
 torch
 torchvision

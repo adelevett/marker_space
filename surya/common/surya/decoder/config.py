@@ -77,6 +77,8 @@ class SuryaDecoderConfig(PretrainedConfig):
             self.rope_scaling["rope_type"] = self.rope_scaling["type"]
         rope_config_validation(self)
 
+        self.pad_token_id = kwargs.get("pad_token_id", 2)
+
         super().__init__(
             tie_word_embeddings=tie_word_embeddings,
             **kwargs,

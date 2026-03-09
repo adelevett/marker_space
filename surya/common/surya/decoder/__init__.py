@@ -338,7 +338,7 @@ class Qwen2RotaryEmbedding(nn.Module):
                 "rope_type", config.rope_scaling.get("type")
             )
         else:
-            self.rope_type = "default"
+            self.rope_type = "linear"
         self.max_seq_len_cached = config.max_position_embeddings
         self.original_max_seq_len = config.max_position_embeddings
 

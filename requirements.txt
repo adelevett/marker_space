@@ -2,6 +2,7 @@
 transformers
 torch
 torchvision
+pymupdf>=1.23.0
 numpy<2.0.0
 opencv-python
 gradio>=4.0.0
